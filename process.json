@@ -1,0 +1,19 @@
+{
+	"apps": [
+		{
+			"name": "disicord-bot",
+			"script": "./app/server.js",
+			"merge_logs": true,
+			"instances": 1,
+			"out_file": "/dev/null",
+			"error_file": "/dev/null",
+			"exec_mode": "cluster",
+			"env": {
+				"NODE_ENV": "DEVELOPMENT"
+			},
+			"env_production": {
+				"NODE_ENV": "PRODUCTION"
+			}
+		}
+	]
+}
