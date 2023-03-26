@@ -1,8 +1,11 @@
+const express = require('express');
+const app = express()
 const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
 
 dotenv.config({ path: './config/.env' });
+const PORT = process.env.PORT || 4000;
 const token = process.env.DISCORD_TOKEN;
 // Require the necessary discord.js classes
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
@@ -51,3 +54,11 @@ for (const folder of commandFolders) {
 
 // Log in to Discord with your client's token
 client.login(token);
+
+app.get('/', (req, res) => {
+    res.send('Welcome to Discord Bot by SUJWN');
+});
+
+app.listen(PORT, () => {
+    console.log(`API listening on PORT ${PORT} `)
+});
