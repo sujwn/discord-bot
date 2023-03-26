@@ -4,8 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
 
-dotenv.config({ path: './config/.env' });
-const PORT = process.env.PORT || 4000;
+const dotenvPath = path.join(__dirname, 'config', '.env');
+dotenv.config({ path: dotenvPath });
+
+const PORT = process.env.PORT || 5000;
 const token = process.env.DISCORD_TOKEN;
 // Require the necessary discord.js classes
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
