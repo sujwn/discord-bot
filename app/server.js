@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const { clientId, guildId, token } = require('../config/config.json');
+const dotenv = require('dotenv');
 
+dotenv.config({ path: './config/.env' });
+const token = process.env.DISCORD_TOKEN;
 // Require the necessary discord.js classes
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
 
