@@ -12,14 +12,11 @@ module.exports = {
                     .setLabel('Check-in')
                     .setStyle(ButtonStyle.Primary),
                 new ButtonBuilder()
-                    .setCustomId('lunch')
-                    .setLabel('Lunch')
-                    .setStyle(ButtonStyle.Primary),
-                new ButtonBuilder()
                     .setCustomId('check-out')
                     .setLabel('Check-out')
                     .setStyle(ButtonStyle.Primary),
             );
-        await interaction.reply({ content: 'Select your option:', components: [row] });
+        // Send message that only visible to the user who run the command
+        await interaction.reply({ content: 'Select your option:', components: [row], ephemeral: true });
     },
 };
