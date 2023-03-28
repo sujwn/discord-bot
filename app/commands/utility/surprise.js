@@ -6,7 +6,7 @@ module.exports = {
         .setName('surprise')
         .setDescription('Send a surpirse message!'),
     async execute(interaction) {
-        let surpriseText = `🟥🟥🟥🟥🟥🟥🟥🟥🟥\n🟥⬜⬜⬜⬜⬜⬜⬜🟥\n🟥⬜⬛⬜⬛⬛⬛⬜🟥\n🟥⬜⬛⬜⬛⬜⬜⬜🟥\n🟥⬜⬛⬛⬛⬛⬛⬜🟥\n🟥⬜⬜⬜⬛⬜⬛⬜🟥\n🟥⬜⬛⬛⬛⬜⬛⬜🟥\n🟥⬜⬜⬜⬜⬜⬜⬜🟥\n🟥🟥🟥🟥🟥🟥🟥🟥🟥`;
+        let surpriseText = `(ɔ◔‿◔)ɔ ♥`;
         await interaction.reply(surpriseText);
     },
 };

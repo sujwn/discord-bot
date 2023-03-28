@@ -3,7 +3,7 @@ const { ActionRowBuilder, ButtonBuilder, ButtonStyle, SlashCommandBuilder } = re
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('work')
-        .setDescription('Shows work command options.'),
+        .setDescription('Shows work command options like check-in and check-out.'),
     async execute(interaction) {
         const row = new ActionRowBuilder()
             .addComponents(
@@ -14,6 +14,10 @@ module.exports = {
                 new ButtonBuilder()
                     .setCustomId('check-out')
                     .setLabel('Check-out')
+                    .setStyle(ButtonStyle.Primary),
+                new ButtonBuilder()
+                    .setCustomId('check-in-list')
+                    .setLabel('Check-in List')
                     .setStyle(ButtonStyle.Primary),
             );
         // Send message that only visible to the user who run the command
