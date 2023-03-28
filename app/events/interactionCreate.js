@@ -39,9 +39,9 @@ module.exports = {
                 // Send message with embed and button
                 await interaction.reply({ embeds: [embed], components: [] });
             } else if (interaction.customId === 'check-out') {
-                if (checkOuts.has(userId)) {
-                    return interaction.reply({ content: 'You have already checked out today! :sweat_smile:', ephemeral: true });
-                }
+                // if (checkOuts.has(userId)) {
+                //     return interaction.reply({ content: 'You have already checked out today! :sweat_smile:', ephemeral: true });
+                // }
                 // open popup modal that asks user to fill textarea of today activity
                 const modal = new ModalBuilder()
                     .setCustomId('check-out-modal')
@@ -152,13 +152,13 @@ module.exports = {
                     .setFooter({ text: 'Healstation' });
 
                 // add button to to message that allows user to cancel check-out
-                const cancelCheckOutButton = new ButtonBuilder()
-                    .setCustomId('cancel-check-out')
-                    .setLabel('Cancel Check-out')
-                    .setStyle(ButtonStyle.Danger)
-                    .setDisabled(false);
+                // const cancelCheckOutButton = new ButtonBuilder()
+                //     .setCustomId('cancel-check-out')
+                //     .setLabel('Cancel Check-out')
+                //     .setStyle(ButtonStyle.Danger)
+                //     .setDisabled(false);
                         
-                const row = new ActionRowBuilder().addComponents(cancelCheckOutButton);
+                // const row = new ActionRowBuilder().addComponents(cancelCheckOutButton);
                         
                 // Send message with embed and button
                 await interaction.reply({ embeds: [embed], components: [row] });
