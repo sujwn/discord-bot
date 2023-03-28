@@ -32,9 +32,8 @@ module.exports = {
                         // { name: '\u200B', value: '\u200B' },
                         // { name: 'Name', value: user.displayName, inline: true },
                         { name: 'Check-in Time', value: today.toLocaleTimeString() },
-                        { name: '\u200B', value: '\u200B' },
                     )
-                    .setTimestamp()
+                    // .setTimestamp()
                     .setFooter({ text: 'Healstation' });
 
                 // Send message with embed and button
@@ -74,7 +73,7 @@ module.exports = {
                     // .setColor(0x0099FF)
                     .setTitle('Check-In List')
                     .setDescription(`${today.toLocaleString('default', { weekday: 'long' })}, ${todayDate}`)
-                    .setTimestamp()
+                    // .setTimestamp()
                     .setFooter({ text: 'Healstation' });
 
                 // Add checked in users to embed
@@ -148,9 +147,8 @@ module.exports = {
                         // { name: 'Name', value: user.displayName, inline: true },
                         { name: 'Check-out Time', value: today.toLocaleTimeString() },
                         { name: 'Activities', value: activitiesInput },
-                        { name: '\u200B', value: '\u200B' },
                     )
-                    .setTimestamp()
+                    // .setTimestamp()
                     .setFooter({ text: 'Healstation' });
 
                 // add button to to message that allows user to cancel check-out
