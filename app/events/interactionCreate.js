@@ -42,6 +42,10 @@ module.exports = {
                 // if (checkOuts.has(userId)) {
                 //     return interaction.reply({ content: 'You have already checked out today! :sweat_smile:', ephemeral: true });
                 // }
+                // Check if user has already checked in
+                if (!checkIns.has(userId)) {
+                    return interaction.reply({ content: 'You have not checked in today! :thinking:', ephemeral: true });
+                }
                 // open popup modal that asks user to fill textarea of today activity
                 const modal = new ModalBuilder()
                     .setCustomId('check-out-modal')
@@ -122,10 +126,10 @@ module.exports = {
                 const userId = interaction.user.id;
                 const user = interaction.guild.members.cache.get(userId);
 
-                // Check if user has already checked out
-                if (!checkIns.has(userId)) {
-                    return interaction.reply({ content: 'You have not checked in today! :thinking:', ephemeral: true });
-                }
+                // Check if user has already checked in
+                // if (!checkIns.has(userId)) {
+                //     return interaction.reply({ content: 'You have not checked in today! :thinking:', ephemeral: true });
+                // }
 
                 // Add user to checked in list
                 checkOuts.set(userId, Date.now());
