@@ -161,7 +161,7 @@ module.exports = {
                 // const row = new ActionRowBuilder().addComponents(cancelCheckOutButton);
                         
                 // Send message with embed and button
-                await interaction.reply({ embeds: [embed], components: [row] });
+                await interaction.reply({ embeds: [embed], components: [] });
             }
         }
     },
