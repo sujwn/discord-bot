@@ -1,7 +1,7 @@
 {
 	"apps": [
 		{
-			"name": "disicord-bot",
+			"name": "discord-bot",
 			"script": "./app/server.js",
 			"merge_logs": true,
 			"instances": 1,
